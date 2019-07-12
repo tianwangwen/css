@@ -1,0 +1,248 @@
+<html>
+	<head>
+		<title>day3</title>
+		<style>
+			body {
+				font-size: 14px;
+			}
+			img {
+				width: 20px;
+				height: 20px;
+			}
+			#text-indent {
+				background-color: #f5f5f5;
+				margin-left: 40px;
+			}
+			#text-indent .em {
+				text-indent: 2em;
+			}
+			#text-indent .px {
+				text-indent: 15px;
+			}
+			#text-indent .per {
+				text-indent: 10%;
+			}
+			#text-indent .-em {
+				text-indent: -2em;
+			}
+
+			#text-align .left {
+				text-align: left;
+			}
+			#text-align .right {
+				text-align: right;
+			}
+			#text-align .center {
+				text-align: center;
+			}
+			#text-align .justify {
+				text-align: justify;
+			}
+
+			#line-height .p {
+				font-size: 14px;
+				line-height: 1.5;
+			}
+			#line-height .span {
+				line-height: 20px;
+			}
+			#line-height .pspan {
+				line-height: 40px;
+			}
+
+			#line-height .line em {
+				font-size: 20px;
+				line-height: 40px;
+			}
+			#line-height .line span {
+				font-size: 20px;
+				line-height: 20px;
+			}
+			#line-height .line i {
+				font-size: 40px;
+				line-height: 70px;
+			}
+
+			#line-height .block {
+				width: 500px;
+				background-color: #f5f5f5;
+				line-height: 10px;
+			}
+			#line-height .block p {
+				font-size: 20px;
+			}
+
+			#vertical-align {
+				line-height: 40px;
+			}
+
+			#vertical-align .baseline span {
+				color: #4d76cc;
+				vertical-align: baseline;
+			} 
+			#vertical-align .sub span {
+				color: #4d76cc;
+				vertical-align: sub;
+			} 
+			#vertical-align .super span {
+				color: #4d76cc;
+				vertical-align: super;
+			} 
+			#vertical-align .top span {
+				color: #4d76cc;
+				vertical-align: top;
+			} 
+			#vertical-align .text-top span {
+				color: #4d76cc;
+				vertical-align: text-top;
+			} 
+			#vertical-align .middle span {
+				color: #4d76cc;
+				vertical-align: middle;
+			} 
+			#vertical-align .bottom span {
+				color: #4d76cc;
+				vertical-align: bottom;
+			} 
+			#vertical-align .text-bottom span {
+				color: #4d76cc;
+				vertical-align: text-bottom;
+			} 
+			#vertical-align .per span {
+				color: #4d76cc;
+				vertical-align: 100%;
+			} 
+			#vertical-align .len span {
+				color: #4d76cc;
+				vertical-align: -10px;
+			}
+			#vertical-align .img {
+				font-size: 20px;
+			} 
+			#vertical-align .img img {
+				/* vertical-align: middle; */
+			} 
+
+			#word-spacing .word {
+				word-spacing: 10px;
+			}
+			#word-spacing .words {
+				word-spacing: -10px;
+			}
+
+			#letter-spacing .word {
+				letter-spacing: 1em;
+			}
+			#letter-spacing .words {
+				letter-spacing: -2px;
+			}
+			#letter-spacing .inherit {
+				font-size: 20px;
+				letter-spacing: 1em;
+			}
+			#letter-spacing .inherit em{
+				font-size: 50%;
+			}
+			#text-transform .word {
+				text-transform: uppercase;
+			}
+			#text-transform .words {
+				text-transform: lowercase;
+			}
+			#text-transform .inherit {
+				text-transform: capitalize;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h3>缩进 text-indent</h3>
+		<div id="text-indent">
+			<p class="normal">普通字体，用来对比em</p>
+			<p class="em">this is text-indent: 2em</p>
+			<p class="px">this is text-indent: 15px</p>
+			<p class="per">this is text-indent: 10%</p>
+			<p class="-em">this is text-indent: -2em</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>水平对齐 text-align</h3>
+		<div id="text-align">
+			<p class="left">this is text-align: left</p>
+			<p class="right">this is text-align: right</p>
+			<p class="center">this is text-align: center</p>
+			<p class="justify">this is text-align: justify 两端对齐文本效果</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>行高 line-height</h3>
+		<div id="line-height">
+			<p class="p">this is a p element line-height: 1.5；实际高度 14 * 1.5 = 21</p>
+			<p class="p">
+				<span class="pspan">this is p child span line-height: 40px</span><br/>
+				<span class="pspan">this is p child span line-height: 40px</span>
+			</p>
+			<div class="line">
+				<i>containing</i>
+				<em>A line</em>
+				<span>Box</span>
+				some text
+			</div>
+			<div class="block">
+				<p>this paragraph's font-size is 18px, but this inherited 'line-height' value is onle 10px.this may cause the lines of text to overlap eacg other bt a small amount.</p>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>垂直文本对齐 vertical-align</h3>
+		<div id="vertical-align">
+			<p class="baseline">comparison text<span>this is span vertical-align: baseline,汉字对比</span>对比文案</p>
+			<p class="sub">comparison text<span>this is span vertical-align: sub,汉字对比</span>对比文案</p>
+			<p class="super">comparison text<span>this is span vertical-align: super,汉字对比</span>对比文案</p>
+			<p class="top">comparison text<span>this is span vertical-align: top,汉字对比</span>对比文案</p>
+			<p class="text-top">comparison text<span>this is span vertical-align: text-top,汉字对比</span>对比文案</p>
+			<p class="middle">comparison text<span>this is span vertical-align: middle,汉字对比</span>对比文案</p>
+			<p class="bottom">comparison text<span>this is span vertical-align: bottom,汉字对比</span>对比文案</p>
+			<p class="text-bottom">comparison text<span>this is span vertical-align: text-bottom,汉字对比</span>对比文案</p>
+			<p class="per">comparison text<span>this is span vertical-align: 100%,汉字对比</span>对比文案</p>
+			<p class="len">comparison text<span>this is span vertical-align: -10px,汉字对比</span>对比文案</p>
+			<p class="img">comparison text<img src="./icon.png" alt="" />对比文案</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>字间隔(word-spacing)</h3>
+		<div id="word-spacing">
+			<p class="word">this is word-spacing: 10px; 间隔10像素</p>
+			<p class="words">this is word-spacing: -10px; 间隔10像素</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>字间隔(letter-spacing)</h3>
+		<div id="letter-spacing">
+			<p class="word">this is word-spacing: 1em; 间隔10像素 $%^&(()&^^%</p>
+			<p class="words">this is word-spacing: -2px; 间隔10像素 $%^&(()&^^%</p>
+			<p class="inherit">this is p element letter-spacing: 1em, font-size: 20px;<em>this is em element letter-spacing: 2em, font-size: 50%</em></p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>文本转换(text-transform)</h3>
+		<div id="text-transform">
+			<p class="word">this is text-transform: uppercase; THIS IS TEXT-TRANSFORM: UPPERCASE</p>
+			<p class="words">this is text-transform: lowercase;  THIS IS TEXT-TRANSFORM: LOWERCASE</p>
+			<p class="inherit">this is text-transform: capitalize; THIS IS TEXT-TRANSFORM: CAPITALIZE</p>
+		</div>
+	</body>
+</html>
