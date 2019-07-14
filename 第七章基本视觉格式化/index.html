@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>基本视觉格式化</title>
+		<style>
+			.block {
+				width: 500px;
+				background-color: #f5f5f5;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.margin {
+				background-color: #f5f5f5;
+			}
+			.margin p {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.border {
+				background-color: #f5f5f5;
+				border-top: 1px solid #666;
+				border-bottom: 1px solid #666;
+			}
+			.border p {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.hebing li  {
+				margin: 20px 0;
+			}
+
+			.hebing2 {
+				background-color: #f5f5f5;
+			}
+			.hebing2  ul {
+				margin-bottom: 10px;
+			}
+			.hebing2  li {
+				margin-bottom: 20px;
+			}
+			.hebing2  h2 {
+				margin-bottom: 30px;
+			}
+
+			.hebing3 li {
+				border: 1px solid #666;
+				margin: 20px 0;
+			}
+				
+		</style>
+	</head>
+	<body>
+		<div>块级元素居中</div>
+		<div class="block">
+			this is div element, margin-left: auto; margin-right: auto;
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div>高度auto</div>
+		<div class="auto">
+			<div class="margin">
+				<p>A p element</p>
+			</div>
+			<div class="border">
+				<p>A p element</p>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div>合并外边距</div>
+		<ul class="hebing">
+			<li>margin-top: 20px; margin-bottom: 20px;</li>
+			<li>margin-top: 20px; margin-bottom: 20px;</li>
+		</ul>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div>多个外边距合并</div>
+		<div class="hebing2">
+			<ul>
+				<li>ul margin-bottom: 10px; li margin-bottom: 20px; h2 margin-bottom: 30px;</li>
+				<li>ul margin-bottom: 10px; li margin-bottom: 20px; h2 margin-bottom: 30px;</li>
+			</ul>
+			<h2>ul margin-bottom: 10px; li margin-bottom: 20px; h2 margin-bottom: 30px;</h2>
+		</div>
+	</body>
+</html>

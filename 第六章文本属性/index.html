@@ -152,7 +152,40 @@
 			#text-transform .inherit {
 				text-transform: capitalize;
 			}
-			
+
+			#text-decoration .underline {
+				text-decoration: underline;
+			}
+			#text-decoration em {
+				color: red;
+			}
+			#text-decoration .overline {
+				text-decoration: overline;
+			}
+			#text-decoration .line-through {
+				text-decoration: line-through;
+			}
+			#text-decoration .blink {
+				text-decoration: blink;
+			}
+
+			#white-space {
+				width: 400px;
+				background-color: #f5f5f5;
+			}
+
+			#white-space .nowrap {
+				white-space: nowrap;
+			}
+			#white-space .pre {
+				white-space: pre;
+			}
+			#white-space .pre-wrap {
+				white-space: pre-wrap;
+			}
+			#white-space .pre-line {
+				white-space: pre-line;
+			}
 			
 		</style>
 	</head>
@@ -243,6 +276,33 @@
 			<p class="word">this is text-transform: uppercase; THIS IS TEXT-TRANSFORM: UPPERCASE</p>
 			<p class="words">this is text-transform: lowercase;  THIS IS TEXT-TRANSFORM: LOWERCASE</p>
 			<p class="inherit">this is text-transform: capitalize; THIS IS TEXT-TRANSFORM: CAPITALIZE</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>文本装饰(text-decoration)</h3>
+		<div id="text-decoration">
+			<p class="underline">this is text-decoration: underline; </p>
+			<p class="overline">this is text-decoration: overline; </p>
+			<p class="line-through">this is text-decoration: line-through;</p>
+			<p class="blink">this is text-decoration: blink;</p>
+			<p class="underline">this is text-decoration: underline;<em>this is em element: underline;</em> other text </p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<h3>处理空白符(white-space)</h3>
+		<div id="white-space">
+			<p class="nowrap">this                        is white-space: 
+				nowrap; </p>
+			<p class="pre">this                is white-space: 
+				pre; </p>
+			<p class="pre-wrap">this                   is white-space: 
+				pre-wrap; </p>
+			<p class="pre-line">this                    is white-space: 
+				pre-line; </p>
 		</div>
 	</body>
 </html>
