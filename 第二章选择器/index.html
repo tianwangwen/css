@@ -2,23 +2,113 @@
 	<head>
 		<title>第二章选择器</title>
 		<style>
+            .hasChildren:first-child {
+                color: red;
+            }
 			.hasChildren p:first-child {
                 color: green;
             }
             .hasChildren li:first-child {
                 color: green;
             }
+
+            .attr p[class*="foo"] {
+                color: red;
+            }
+            .attr p[class~="foo"] {
+                color: green;
+            }
+
+            .child h1 > b { color: blue; }
+
+            .firstLetter:first-letter { font-size: 40px; }
+
+            .firstLine {
+                width: 500px;
+                background-color: #f5f5f5;
+            }
+            .firstLine:first-line { color: red; }
+
+            .before {
+                font-size: 18px;
+                color: red;
+            }
+            .before::before {
+                content: "¥ ";
+                font-size: 14px;
+            }
 		</style>
 	</head>
 	<body>
+        <h3>属性选择器</h3>
+        <div class="attr">
+            <pre>
+            css
+                p[class*="foo"] {
+                    color: red;
+                }
+                p[class~="foo"] {
+                    color: green;
+                }
+            </pre>
+            <p class="bar foo baz">has class bar foo baz</p>
+            <p class="barr fooo bazz">has class barr fooo bazz</p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>选择子元素</h3>
+        <div class="child">
+            <pre>
+            css
+                h1 > b { color: blue; }
+            </pre>
+            <h1>h1 <b>b</b> /h1</h1>
+            <h1>h1 <em>em <b>b</b> /em</em>/h1</h1>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h3>选择第一个子元素</h3>
         <div class="hasChildren">
             <p>this is p element, <em>this is em element, p child</em> </p>
             <ul>
-                <li>Turn</li>
-                <li>push</li>
+                <li>this is li element, <em>this is em element, li child</em></li>
+                <li>this is li element, <em>this is em element, li child</em></li>
             </ul>
-            <p>Do not push</p>
+            <p>this is p element, <em>this is em element, p child</em> </p>
         </div>
+        <ul>
+            <li>问题1: .hasChildren:first-child 是指哪个元素？</li>
+            <li>问题2: p:first-child 是指哪个元素？</li>
+            <li>问题3: ul:first-child 是指哪个元素？</li>
+            <li>问题4: li:first-child 是指哪个元素？</li>
+            <li>问题5: em:first-child 是指哪个元素？</li>
+        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h3>伪元素选择器</h3>
+        <div class="element">
+            <h2 class="firstLetter">this is an h2 element</h2>
+            <p class="firstLine">
+                中华人民共和国（People's Republic of China），简称“中国”，成立于1949年10月1日 [1]  ，位于亚洲东部，太平洋西岸 [2]  ，是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家 [3]  ，以五星红旗为国旗 [4]  、《义勇军进行曲》为国歌 [5]  ，国徽内容为国旗、天安门、齿轮和麦稻穗 [6]  ，通用语言文字是普通话和规范汉字 [7]  ，首都北京 [8]  ，是一个以汉族为主体、56个民族共同组成的统一的多民族国家。 [9] 
+                中国陆地面积约960万平方千米，东部和南部大陆海岸线1.8万多千米，内海和边海的水域面积约470多万平方千米。海域分布有大小岛屿7600多个，其中台湾岛最大，面积35798平方千米 [2]  。中国同14国接壤，与8国海上相邻。省级行政区划为23个省、5个自治区、4个直辖市、2个特别行政区。 [2] 
+                中国是世界上历史最悠久的国家之一，有着光辉灿烂的文化和光荣的革命传统 [3]  ，世界遗产数量全球领先 [10]  。1949年新中国成立后，进入社会主义革命和建设时期，1956年实现向社会主义过渡，此后社会主义建设在探索中曲折发展 [11]  。“文化大革命”结束后实行改革开放，沿着中国特色社会主义道路，集中力量进行社会主义现代化建设 [3]  。经过长期努力，中国特色社会主义进入了新时代。 [12] 
+                中国是世界上人口最多的发展中国家 [13]  ，国土面积居世界第三位 [14]  ，是世界第二大经济体，并持续成为世界经济增长最大的贡献者，2018年经济总量突破90万亿元 [15]  。
+            </p>
+            <p class="before">300.20</p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 	</body>
 </html>
